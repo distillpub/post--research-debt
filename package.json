@@ -1,0 +1,24 @@
+
+{
+  "main": "index.md",
+  "name": "research-debt",
+  "distill": {
+    "title": "Research Debt",
+    "description": "",
+    "url": "",
+    "github": "",
+    "firstPublished": "Thu Sep 08 2016 10:27:05 GMT-0700 (PDT)",
+    "lastPublished": "Thu Sep 08 2016 10:27:05 GMT-0700 (PDT)",
+    "authors": [
+      {
+        "firstName": "Chris",
+        "lastName": "Olah",
+        "personalURL": "http://colah.github.io",
+        "affiliation": "Google Brain",
+        "affiliationURL": "http://g.co/brain"
+      }
+    ]
+  },
+  "dependencies": {
+  }
+}
