@@ -1,4 +1,5 @@
 <script src="assets/d3.min.js"></script>
+<script src="assets/distill-hover-box.js"></script>
 
 <style>
 d-fn {
@@ -22,6 +23,7 @@ sub {
   color: #77A;
 }
 </style>
+
 
 <h1>{{ distill.title }}</h1>
 {{> byline.html}}
@@ -55,7 +57,7 @@ Research can also have debt. It comes in several forms:
 
 <!--Often ideas start off very rough and hard to understand and become radically easier as we polish them, developing the right analogies, language, visualizations and abstractions. For example, at one point calculus was something that only geniuses could understand, but we now teach it in high school: something changed, and I don’t think it was us.<d-fn>This form of debt seems particularly tragic, because I think people frequently have a much more digested version of the idea in their heads. Unfortunately, they don't communicate it except in personal conversations because it is often hard to communicate and fragile. (An additional challenge is that people often have intuitions they know aren’t 100% right, even though they are useful.) The result is that everyone needs to repolish the ideas for themselves, and the ideas aren’t progressively refined.</d-fn>-->
 
-* **Bad abstractions and notation** -- Abstractions and notation are the user interface of research, shaping how we think and communicate. Unfortunately, we often get stuck with the first formalisms to develop, even when they're really suboptimal.  For example, something with extra electrons is negative, and pi is wrong.
+* **Bad abstractions and notation** -- Abstractions and notation are the user interface of research, shaping how we think and communicate. Unfortunately, we often get stuck with the first formalisms to develop, even when they're really suboptimal.  For example, something with extra electrons is negative, and [pi is wrong](http://tauday.com/).
 
 <!--* **Bad abstractions and notation** -- Abstractions and notation are the user interface of research. When ideas first develop, formalisms develop with them, for communication and researchers’ own thoughts. These initial formalisms tend to be far from optimal but we often get stuck with them. For example, something with extra electrons negative, and pi is wrong.-->
 
@@ -70,13 +72,15 @@ Research can also have debt. It comes in several forms:
 
 The insidious thing about research debt is that it's normal. Everyone takes it for granted, and doesn't realize that things could be different. For example, it's normal to give very mediocre explanations of research, and people perceive that to be the ceiling of explanation quality. On the rare occasions that truly excellent explanations come along, people see them as one-off miracles rather than a sign that we could systematically be doing better.
 
+
+
 <!--These problems arise from trading short term gains for long term costs, much like technical debt. However, research debt is different in two important ways. Firstly, it’s hard to see because it so incredibly pervasive. Secondly, the cost of the debt primarily falls on other people, especially newcomers, in the form of interpretive labor. -->
 
 
 Interpretive Labor
 ------------------
 
-There’s a tradeoff between the energy put into explaining an idea, and the energy needed to understand it. On one extreme, the explainer can painstakingly craft a beautiful explanation, leading their audience to understanding without even realizing it could have been difficult. On the other extreme, the explainer can do the absolute minimal work and abandon their audience to struggling. This energy is called interpretive labor, and it tends to fall on the person trying to understand.
+There’s a tradeoff between the energy put into explaining an idea, and the energy needed to understand it. On one extreme, the explainer can painstakingly craft a beautiful explanation, leading their audience to understanding without even realizing it could have been difficult. On the other extreme, the explainer can do the absolute minimal work and abandon their audience to struggling. This energy is called [interpretive labor](https://acesounderglass.com/2015/06/09/interpretive-labor/), and it tends to fall on the person trying to understand.
 
 Explanations don’t always happen one-to-one. People give lectures, write books, or communicate online. In these one-to-many cases, there's no additional cost to share the explanation with more people. However, the cost of understanding is paid by each and every member of the audience. As a result, the cost of understanding often has a huge multiplier in the interpretive labor tradeoff.<d-fn>More formally, if N people are trying to understand each other, it takes each one O(1) effort to write an explanation of their ideas but O(N) effort to understand each of the other N-1 people's ideas. The result is that energy cost looks like O(a + bN) where a and b are coefficients for the trade off between energy on the explanation side and energy on the understanding side. That is a is the energy spent on explaining and b is the corresponding effort needed to understand.</d-fn>  For example, my average blog post is read by over 100,000 people; if I can save each reader just one second, I’ve saved humanity 30 hours.<d-fn>In some sense, this suggests I should be willing to spend 14 hours to save one second. I don’t go that far, but I do try to keep it in mind.</d-fn>
 
@@ -112,13 +116,19 @@ Distill is an umbrella for two efforts to support research distillation and othe
 This is just a start: there’s a lot more that needs to be done. A complete ecosystem for this kind of work needs several other components, including places where one can learn these skills and reliable sources of employment doing this kind of work. We’re optimistic that will come with time.
 
 
-Related Work
--------------
+Further Reading: Examples
+--------------------------
+
+**Visual Mathematics:** Several mathematicians have made remarkable efforts to visually explain certain topics. The most striking example is [Tristan Needham](https://www.usfca.edu/faculty/tristan-needham): his book [*Visual Complex Analysis*]() is a breathtaking tour-de-force, and he's been working for the last several years on a similar book, *Visual Differential Geometry*. Similarly, Nathan Carter's [*Visual Group Theory*]() does a remarkable job bringing a visual perspective to the topic and laying intuition bare. On a smaller scale, there's been a great deal of exploration -- both historically, and even more recently -- in visual mathematical proofs; see [MathOverflow: Proofs Without Words](http://mathoverflow.net/questions/8846/proofs-without-words) for examples.
+
+**Explorable Explanations:**
+
+Further Reading: Philosophy
+----------------------------
 
 A number of people and communities have addressed
 
 * **Mathematics:** There seems to be a growing appreciation of the
-
 
   Mathematical culture is the only place I've really seen the contribution of distilling knowledge deeply acknowledged and celebrated. Some great comments and references are collected in this [MathOverflow thread](http://mathoverflow.net/questions/43690/whats-a-mathematician-to-do). I'd draw particular attention to section 6 of Thurston's essay [On Proof and Progress in Mathematics](https://arxiv.org/pdf/math/9404236v1.pdf) where he recounts accidentally killing a field by drowning it in research debt.
 
@@ -171,11 +181,15 @@ function process_d_fns() {
 
   // Deal with each footnote.
   fns.forEach((e,n) => {
-    fn_content.push(e.innerHTML);
-    var sup = window.document.createElement("sup");
     n = (n+1)+"";
-    sup.innerHTML = "<a href=\"#fn-"+n+"\" id=\"fn-ref-"+n+"\" >"+n+"</a>";
+    fn_content.push(e.innerHTML);
+    var key = "fn-"+n;
+    DistillHoverBox.contentMap[key] = e.innerHTML;
+    var sup = window.document.createElement("sup");
+    //sup.innerHTML = "<a href=\"#fn-"+n+"\" id=\"fn-ref-"+n+"\" >"+n+"</a>";
+    sup.innerHTML = "<a id=\"fn-ref-"+n+"\" style=\"cursor:pointer\">"+n+"</a>";
     e.parentNode.replaceChild(sup, e);
+    DistillHoverBox.bind("#fn-ref-"+n, key)
   });
 
   // Render footnotes at bottom
