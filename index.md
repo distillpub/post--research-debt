@@ -28,6 +28,10 @@ sub {
 
 Achieving a research-level understanding of most topics is like climbing a mountain. Aspiring researchers must struggle to understand vast bodies of work that came before them, to learn techniques, and to gain intuition. Upon reaching the top, the new researcher begins doing novel work, throwing new stones onto the top of the mountain and making it a little taller for whoever comes next.
 
+<figure class="w-page">
+<img src="assets/debt-mountain.jpg">
+</figure>
+
 Mathematics is a striking example of this. For centuries, brilliant minds have climbed the mountain range of mathematics and laid new boulders at the top. Over time, different peaks formed, built on top of particularly beautiful results. Now the peaks of mathematics are so numerous and steep that no person can climb them all. Even with a lifetime of dedicated effort, a mathematician may only enjoy some of their vistas.
 
 People expect the climb to be hard. It reflects the tremendous progress and cumulative effort that’s gone into mathematics. The climb is seen as an intellectual pilgrimage, the labor a rite of passage. But the climb could be massively easier. It's entirely possible to build paths and staircases into these mountains.<d-fn>That is, really outstanding tutorials, reviews, textbooks, and so on.</d-fn> The climb isn’t something to be proud of.
@@ -35,8 +39,6 @@ People expect the climb to be hard. It reflects the tremendous progress and cumu
 <!--... Ideas could be tens, perhaps hundreds, of times easier to understand. The climb isn’t something to be proud of.-->
 
 The climb isn’t progress: the climb is a mountain of debt.
-
-
 
 
 The Debt
@@ -72,7 +74,6 @@ The insidious thing about research debt is that it's normal. Everyone takes it f
 
 <!--These problems arise from trading short term gains for long term costs, much like technical debt. However, research debt is different in two important ways. Firstly, it’s hard to see because it so incredibly pervasive. Secondly, the cost of the debt primarily falls on other people, especially newcomers, in the form of interpretive labor. -->
 
-
 Interpretive Labor
 ------------------
 
@@ -88,6 +89,10 @@ Interpretive labor is most obviously linked to “poor exposition” component o
 
 Research debt is the accumulation of missing interpretive labor. It’s extremely natural for young ideas to go through a stage of debt, like early prototypes in engineering. The problem is that we often stop at that point. Young ideas aren’t ending points for us to put in a paper and abandon. When we let things stop there the debt piles up. It becomes harder to understand and build on each other’s work and the field fragments.
 
+
+<figure>
+  <img src="assets/fpo-circle-3.png">
+</figure>
 
 Supporting Distillation
 -----------------------
