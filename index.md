@@ -26,13 +26,14 @@ sub {
 
 
 <h1>{{ distill.title }}</h1>
+
 {{> byline.html}}
 
-Achieving a research-level understanding of most topics is like climbing a mountain. Aspiring researchers must struggle to understand vast bodies of work that came before them, to learn techniques, and to gain intuition. Upon reaching the top, the new researcher begins doing novel work, throwing new stones onto the top of the mountain and making it a little taller for whoever comes next.
-
-<figure class="w-page">
+<figure style="margin-top: 0px; margin-bottom: 30px;">
 <img src="assets/debt-mountain.jpg">
 </figure>
+
+Achieving a research-level understanding of most topics is like climbing a mountain. Aspiring researchers must struggle to understand vast bodies of work that came before them, to learn techniques, and to gain intuition. Upon reaching the top, the new researcher begins doing novel work, throwing new stones onto the top of the mountain and making it a little taller for whoever comes next.
 
 Mathematics is a striking example of this. For centuries, brilliant minds have climbed the mountain range of mathematics and laid new boulders at the top. Over time, different peaks formed, built on top of particularly beautiful results. Now the peaks of mathematics are so numerous and steep that no person can climb them all. Even with a lifetime of dedicated effort, a mathematician may only enjoy some of their vistas.
 
