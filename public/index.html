@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<script src="http://distill.pub/template.js"></script>
+<script type="text/front-matter">
+  title: Research Debt
+  description:
+  authors:
+    - Chris Olah: http://colah.github.io
+    - Shan Carter: http://shancarter.com
+  affiliations:
+    - Google Brain: http://g.co/brain
+    - Google Brain: http://g.co/brain
+</script>
+<style>
+dt-article ul li {
+  font-family:  Georgia, serif;
+  padding-bottom: 15px;
+  margin-left: 20px;
+  padding-left: 5px;
+}
+dt-article ul li:last-of-type {
+  padding-bottom: 5px;
+}
+
+dt-article ul li p {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+dt-article ul li p:last-of-type {
+  margin-bottom: 0px;
+}
+
+</style>
+</head>
+
+<body>
+<dt-article class="centered">
+
+  <figure class="l-page" style="margin-top: 50px; margin-bottom: 10px;">
+  <img src="assets/debt-mountain.jpg">
+  </figure>
+
+  <h1 style="margin-top: 40px;">Research Debt</h1>
+  <dt-byline></dt-byline>
+
+
+  <p>Achieving a research-level understanding of most topics is like climbing a mountain. Aspiring researchers must struggle to understand vast bodies of work that came before them, to learn techniques, and to gain intuition. Upon reaching the top, the new researcher begins doing novel work, throwing new stones onto the top of the mountain and making it a little taller for whoever comes next.
+
+  <p>Mathematics is a striking example of this. For centuries, brilliant minds have climbed the mountain range of mathematics and laid new boulders at the top. Over time, different peaks formed, built on top of particularly beautiful results. Now the peaks of mathematics are so numerous and steep that no person can climb them all. Even with a lifetime of dedicated effort, a mathematician may only enjoy some of their vistas.
+
+  <p>People expect the climb to be hard. It reflects the tremendous progress and cumulative effort that’s gone into mathematics. The climb is seen as an intellectual pilgrimage, the labor a rite of passage. But the climb could be massively easier. It's entirely possible to build paths and staircases into these mountains.<dt-fn>That is, really outstanding tutorials, reviews, textbooks, and so on.</dt-fn> The climb isn’t something to be proud of.
+
+  <!--<p>... Ideas could be tens, perhaps hundreds, of times easier to understand. The climb isn’t something to be proud of.-->
+
+  <p>The climb isn’t progress: the climb is a mountain of debt.
+
+  <h2>The Debt</h2>
+
+  <p>Programmers talk about technical debt: there are ways to write software that are faster in the short run but problematic in the long run. Managers talk about institutional debt: institutions can grow quickly at the cost of bad practices creeping in. Both are easy to accumulate but hard to get rid of.
+
+  <p>Research can also have debt. It comes in several forms:
+
+  <ul>
+
+  <li> <b>Poor Exposition</b> -- Often, there is no good explanation of important ideas and one has to struggle to understand them. This problem is so pervasive that we take it for granted and don't appreciate how much better things could be.</li>
+
+  <!--Poor exposition is one of the most visible and pervasive forms of research debt (much like poor documentation in technical debt). Explanations of core ideas don’t exist or are hard to follow. The situation is often so bad that we don’t realize exposition could be much better: we accept rope ladders when we could make elevators.-->
+
+  <li> <b>Undigested Ideas</b> -- Most ideas start off rough and hard to understand. They become radically easier as we polish them, developing the right analogies, language, and ways of thinking.</li>
+
+
+  <!--Often ideas start off very rough and hard to understand and become radically easier as we polish them, developing the right analogies, language, visualizations and abstractions. For example, at one point calculus was something that only geniuses could understand, but we now teach it in high school: something changed, and I don’t think it was us.<dt-fn>This form of debt seems particularly tragic, because I think people frequently have a much more digested version of the idea in their heads. Unfortunately, they don't communicate it except in personal conversations because it is often hard to communicate and fragile. (An additional challenge is that people often have intuitions they know aren’t 100% right, even though they are useful.) The result is that everyone needs to repolish the ideas for themselves, and the ideas aren’t progressively refined.</dt-fn>-->
+
+  <li> <b>Bad abstractions and notation</b> -- Abstractions and notation are the user interface of research, shaping how we think and communicate. Unfortunately, we often get stuck with the first formalisms to develop, even when they're really suboptimal.  For example, something with extra electrons is negative, and <a href="http://tauday.com/">pi is wrong</a>.</li>
+
+  <!--* <b>Bad abstractions and notation</b> -- Abstractions and notation are the user interface of research. When ideas first develop, formalisms develop with them, for communication and researchers’ own thoughts. These initial formalisms tend to be far from optimal but we often get stuck with them. For example, something with extra electrons negative, and pi is wrong.-->
+
+  <!--* <b>Bad definitions, abstractions, and notation</b> -- Formalisms like abstractions and notation are the user interface of research. When ideas first develop, formalisms develop with them, for communication and researchers’ own thoughts. These initial formalisms are often far from the best possible ones. Better formalisms arise over time, from general refinement of ideas, deliberate work on the formalism, or opportunities in new media. Unfortunately, poor formalisms are extremely persistent, even once better ones are found.<dt-fn>One reason bad formalisms persist is that the switching costs are high, but there’s another, subtler reason. Becoming an expert in a field causes the formalisms to become part of you, in the same way language is. When one sees new formalisms, they often feel worse: you’re not fluent in the new notation, so it feels clunky, and you’ve learned to cope with any shortcomings of your familiar formalism that it fixes. Even genuine, significant improvements may seem minor or unimportant to an expert. Sadly, it’s the novice who faces the brunt of the cost.</dt-fn> For example: something with extra electrons is negative, pi is wrong, and topology is better defined in terms of closure.-->
+
+  <!--* <b>Unavailable Tools</b>  -- Whether you are a student programming for the first time, or an expert trying to reproduce an experiment, being able to easily dive into topics and get your hands dirty is critical. Availability of tools makes it easier to learn because people can test their mental models.<dt-fn>Rapid feedback is a documentation all of its own, and quick results are an incredible motivation</dt-fn> It also facilitates the reproduction of results and the translation of research into application. Sadly, these tools are often not public, or the public versions are unusable.-->
+
+  <li> <b>Noise</b> -- Being a researcher is like standing in the middle of construction site. Countless papers scream for your attention and there's no easy way to filter or summarize them.<dt-fn>Because most work is explained poorly, it takes a lot of energy to understand each piece of work. For many papers, I want a simple one sentence explanation of it, but need to fight with it to get that sentence. Because the simplest way to get the attention of interested parties is to get everyone’s attention, we get flooded with work. Because we incentivize people being “prolific,” we get flooded with a lot of work…</dt-fn> I think noise is the main way experts experience research debt.</li>
+
+
+  <!--* <b>Noise</b> -- If becoming a researcher is like climbing a mountain, being a researcher is often like standing in the middle of construction site: loud. When hundreds of papers are published each day, with no easy way to filter or summarize them, the energy needed to keep up with a field is too high.<dt-fn>Because most work is explained poorly, it takes a lot of energy to understand each piece of work. For many papers, I want a simple one sentence explanation of it, but need to fight with it to get that sentence. Because the simplest way to get the attention of interested parties is to get everyone’s attention, we get flooded with work. Because we incentivize people being “prolific,” we get flooded with a lot of work…</dt-fn> I think noise is the main way experts experience research debt.-->
+
+</ul>
+
+  <p>The insidious thing about research debt is that it's normal. Everyone takes it for granted, and doesn't realize that things could be different. For example, it's normal to give very mediocre explanations of research, and people perceive that to be the ceiling of explanation quality. On the rare occasions that truly excellent explanations come along, people see them as one-off miracles rather than a sign that we could systematically be doing better.
+
+
+
+  <!--These problems arise from trading short term gains for long term costs, much like technical debt. However, research debt is different in two important ways. Firstly, it’s hard to see because it so incredibly pervasive. Secondly, the cost of the debt primarily falls on other people, especially newcomers, in the form of interpretive labor. -->
+
+  <h2>Interpretive Labor</h2>
+
+  <p>There’s a tradeoff between the energy put into explaining an idea, and the energy needed to understand it. On one extreme, the explainer can painstakingly craft a beautiful explanation, leading their audience to understanding without even realizing it could have been difficult. On the other extreme, the explainer can do the absolute minimal work and abandon their audience to struggling. This energy is called <a href="https://acesounderglass.com/2015/06/09/interpretive-labor/">interpretive labor</a>, and it tends to fall on the person trying to understand.
+
+  <p>Explanations don’t always happen one-to-one. People give lectures, write books, or communicate online. In these one-to-many cases, there's no additional cost to share the explanation with more people. However, the cost of understanding is paid by each and every member of the audience. As a result, the cost of understanding often has a huge multiplier in the interpretive labor tradeoff.<dt-fn>More formally, if N people are trying to understand each other, it takes each one O(1) effort to write an explanation of their ideas but O(N) effort to understand each of the other N-1 people's ideas. The result is that energy cost looks like O(a + bN) where a and b are coefficients for the trade off between energy on the explanation side and energy on the understanding side. That is a is the energy spent on explaining and b is the corresponding effort needed to understand.</dt-fn>  For example, my average blog post is read by over 100,000 people; if I can save each reader just one second, I’ve saved humanity 30 hours.<dt-fn>In some sense, this suggests I should be willing to spend 14 hours to save one second. I don’t go that far, but I do try to keep it in mind.</dt-fn>
+
+  <figure class="l-full">
+  <img src="assets/publish-one-many.png">
+  </figure>
+
+  <p>In research, we often have a group of researchers all trying to understand each other. Just like before, the cost of explaining stays constant as the group grows, but the cost of understanding everyone else increases. At some size, the effort to understand everyone else becomes too much. As a defense mechanism, people specialize, focusing on a narrower area of interest. The maintainable size of the field is controlled by how you trade off the energy between communicating and understanding.
+
+  <p>Interpretive labor is most obviously linked to “poor exposition” component of technical debt, but I think the same mechanism is behind most of it. Thoughtfully picking notation and abstractions is interpretive labor, making it easier for others to understand and think. Polishing an idea, figuring out the right framing, analogies, and pictures is interpretive labor. <!--Open sourcing clean code instead of just sketching something in a paper is interpretive labor.--> Making your work easy to filter and quickly get the core idea of is interpretive labor.
+
+  <!--Research debt is progressive piling on of interpretive labor. It saves individual researchers’ energy, at the cost of making it harder for the community to understand and build on their work, fragmenting the field.-->
+
+  <p>Research debt is the accumulation of missing interpretive labor. It’s extremely natural for young ideas to go through a stage of debt, like early prototypes in engineering. The problem is that we often stop at that point. Young ideas aren’t ending points for us to put in a paper and abandon. When we let things stop there the debt piles up. It becomes harder to understand and build on each other’s work and the field fragments.
+
+
+
+  <h2>Supporting Distillation</h2>
+
+  <p>Research distillation is the opposite of research debt. It combines deep technical expertise, empathy, design and writing skills to grow clarity and distill ideas. It can be an incredibly satisfying activity, doing justice to our research and laying bare beautiful insights.
+
+ <!-- It’s doing justice to our research, stripping out crud, and laying bare beautiful insights. It’s sharing the rush of insight with others and vicariously reliving understanding for the first time ourselves. -->
+
+  <p>Unfortunately, it’s hard to do so seriously because the research community doesn’t really support or celebrate it. It isn’t seen as a real research contribution. There is a strange kind of informal support for this work<dt-fn>Christopher has personally benefitted a great deal from this informal support.</dt-fn> but it’s tricky to build a career on.
+
+  <p>If you are someone who is excited to distill ideas, to seek clarity, and build beautiful explanations, then I think we are letting you down. You have something incredibly precious to contribute and we aren’t supporting you as much as we ought to. I’m sorry for that. Many of us would like to support you more and that’s why we’ve created Distill.
+
+  <p>Distill is an umbrella for two efforts to support research distillation and other non-traditional contributions:
+
+  <ul>
+  <li> <b>The Distill Journal</b> -- A venue to give traditional validation to non-traditional contributions.</li>
+
+  <li><b>The Distill Prize</b> -- A $10,000 prize to acknowledge outstanding explanations of machine learning.</li>
+  </ul>
+
+
+  <p>This is just a start: there’s a lot more that needs to be done. A complete ecosystem for this kind of work needs several other components, including places where one can learn these skills and reliable sources of employment doing this kind of work. We’re optimistic that will come with time.
+
+
+    <hr>
+
+  <h2><b style="font-size: 160%;">Further Reading</b></h2>
+  <h2>Examples</h2>
+
+  <ul>
+
+  <li><b>Visual Mathematics:</b> Several mathematicians have made remarkable efforts to visually explain certain topics. While visualization isn't necessary to make outstanding explanations, these efforts really stand out as attempts to take sophisticated ideas and beatifully explain them.
+
+    <p>One striking example, <dt-cite key="needham1998visual"><i>Visual Complex Analysis</i></dt-cite> by Needham, a breathtaking tour-de-force of Complex Analysis. (Needham is now working on a book on Differential Geometry.) Similarly, Nathan Carter's <dt-cite key="carter2009visual"><i>Visual Group Theory</i></dt-cite> does a remarkable job bringing a visual perspective to the topic.</p>
+
+    <p>On a smaller scale, there's been a great deal of exploration -- both historically, and even more recently -- in visual mathematical proofs. See the MathOverflow thread <a href="http://mathoverflow.net/questions/8846/proofs-without-words">Proofs Without Words</a> for examples.</p>
+  </li>
+
+  <li><b>Explorable Explanations / Tools for Thought:</b> ... </li>
+
+  <li><b>Research Distribution:</b> Over last few years, there has been a big push to improve the accessibility, convenience, and organization of research.
+
+     <p>Firstly, there is the push for research to be freely available online. This includes the formation of <a href="arxiv.org">ArXiv</a> and <a href="https://www.plos.org/">PLOS</a>, and <a href="http://oad.simmons.edu/oadwiki/Journal_declarations_of_independence">journal editorial boards resigning</a> to start open-access journals. Increasingly, openness is the default in many fields.</p>
+
+     <p>Once it's easy to access all research, the next problem is filtering through the overwhelming amount of research that exists. One neat tool to help with this is Andrej Karpathy's <a href="http://www.arxiv-sanity.com/">ArXiv Sanity</a>. Online communities, such as <a href="https://news.ycombinator.com/">Hacker News</a> and <a href="https://www.reddit.com/r/MachineLearning/">r/MachineLearning</a> can also help curate and draw attention to important research.</p>
+
+     </li>
+
+  <!-- Open access, PLOS, ArXiv, arxiv sanity, etc
+       JMLR statement: http://jmlr.csail.mit.edu/statement.html
+       At least 22 statements
+       OpenAI Unconference?
+       One minute papers, short science papers, ???
+     -->
+
+  </ul>
+
+  <h2>Philosophy</h2>
+
+  <p>A number of people and communities have addressed </p>
+
+  <ul>
+
+  <li> <b>Mathematics:</b> There seems to be a growing appreciation of the
+
+    Mathematical culture is the only place I've really seen the contribution of distilling knowledge deeply acknowledged and celebrated. Some great comments and references are collected in this <a href="http://mathoverflow.net/questions/43690/whats-a-mathematician-to-do">MathOverflow thread</a>. I'd draw particular attention to section 6 of Thurston's essay <dt-cite key="thurston1998proof">On Proof and Progress in Mathematics</dt-cite> where he recounts accidentally killing a field by drowning it in research debt.
+
+    In addition to this culture, there are a number of cases of mathematicians going to remarkable lengths
+
+  <!-- <p style="padding-left: 40px;">*Within a couple of years, a dramatic evacuation of the field started to take place...  I was killing the field.
+  The results I proved ... were documented in a conventional, formidable mathematician’s style...  This created a high entry barrier: I think many graduate students and mathematicians were discouraged that it was hard to learn and understand the proofs of key theorems.*</p> -->
+
+</ul>
+
+</dt-article>
+<dt-appendix class="centered">
+  <h3>Acknowledgments</h3>
+  <p></p>
+</dt-appendix>
+<dt-footer></dt-footer>
+<script type="text/bibliography">
+@book{needham1998visual,
+  title={Visual complex analysis},
+  author={Needham, Tristan},
+  year={1998},
+  publisher={Oxford University Press}
+}
+@misc{nielsen2016thought,
+  title={Thought as a Technology},
+  author={Nielsen, Michael},
+  year={2016},
+  url={http://cognitivemedium.com/tat/index.html}
+}
+@misc{nielsen2016towards,
+  title={Toward an exploratory medium for mathematics},
+  author={Nielsen, Michael},
+  year={2016},
+  ulr={http://cognitivemedium.com/tat/index.html}
+}
+@article{thurston1998proof,
+  title={On proof and progress in mathematics},
+  author={Thurston, William P},
+  journal={New directions in the philosophy of mathematics},
+  pages={337--55},
+  year={1998},
+  url={https://arxiv.org/pdf/math/9404236v1.pdf}
+}
+@book{carter2009visual,
+  title={Visual group theory},
+  author={Carter, Nathan},
+  year={2009},
+  publisher={MAA}
+}
+@misc{jordan2001leading,
+  title={Leading ML researchers issue statement of support for JMLR},
+  author={Chris Atkeson
+   and Peter Bartlett
+   and Andrew Barto
+   and Jonathan Baxter
+   and Yoshua Bengio
+   and Kristin Bennett
+   and Chris Bishop
+   and Justin Boyan
+   and Carla Brodley
+   and Claire Cardie
+   and William Cohen
+   and Peter Dayan
+   and Tom Dietterich
+   and Jerome Friedman
+   and Nir Friedman
+   and Zoubin Ghahramani
+   and David Heckerman
+   and Geoffrey Hinton
+   and Haym Hirsh
+   and Tommi Jaakkola
+   and Michael Jordan
+   and Leslie Kaelbling
+   and Daphne Koller
+   and John Lafferty
+   and Sridhar Mahadevan
+   and Marina Meila
+   and Andrew McCallum
+   and Tom Mitchell
+   and Stuart Russell
+   and Lawrence Saul
+   and Bernhard Schoelkopf
+   and John Shawe-Taylor
+   and Yoram Singer
+   and Satinder Singh
+   and Padhraic Smyth
+   and Richard Sutton
+   and Sebastian Thrun
+   and Manfred Warmuth
+   and Chris Williams
+   and Robert Williamson},
+  year={2001},
+  publisher={October},
+  url={http://jmlr.csail.mit.edu/statement.html}
+}
+</script>
+</body>
+</html>
