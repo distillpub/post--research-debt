@@ -32,6 +32,23 @@ dt-article ul li p:last-of-type {
   margin-bottom: 0px;
 }
 
+dt-fn sup {
+  vertical-align: super;
+  line-height: 0.5em;
+  padding-left: 3px;
+  padding-right: 3px;
+  cursor: pointer;
+}
+
+.FAQ .question {
+  font-weight: bold;
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+.FAQ .answer {
+  padding-left: 40px;
+}
 </style>
 </head>
 
@@ -96,17 +113,17 @@ dt-article ul li p:last-of-type {
 
   <h2>Interpretive Labor</h2>
 
-  <p>There’s a tradeoff between the energy put into explaining an idea, and the energy needed to understand it. On one extreme, the explainer can painstakingly craft a beautiful explanation, leading their audience to understanding without even realizing it could have been difficult. On the other extreme, the explainer can do the absolute minimal work and abandon their audience to struggling. This energy is called <a href="https://acesounderglass.com/2015/06/09/interpretive-labor/">interpretive labor</a>, and it tends to fall on the person trying to understand.
+  <p>There’s a tradeoff between the energy put into explaining an idea, and the energy needed to understand it. On one extreme, the explainer can painstakingly craft a beautiful explanation, leading their audience to understanding without even realizing it could have been difficult. On the other extreme, the explainer can do the absolute minimum and abandon their audience to struggle. This energy is called <a href="https://acesounderglass.com/2015/06/09/interpretive-labor/">interpretive labor</a> <dt-cite key="graeber2015utopia"></dt-cite>.
 
-  <p>Explanations don’t always happen one-to-one. People give lectures, write books, or communicate online. In these one-to-many cases, there's no additional cost to share the explanation with more people. However, the cost of understanding is paid by each and every member of the audience. As a result, the cost of understanding often has a huge multiplier in the interpretive labor tradeoff.<dt-fn>More formally, if N people are trying to understand each other, it takes each one O(1) effort to write an explanation of their ideas but O(N) effort to understand each of the other N-1 people's ideas. The result is that energy cost looks like O(a + bN) where a and b are coefficients for the trade off between energy on the explanation side and energy on the understanding side. That is a is the energy spent on explaining and b is the corresponding effort needed to understand.</dt-fn>  For example, my average blog post is read by over 100,000 people; if I can save each reader just one second, I’ve saved humanity 30 hours.<dt-fn>In some sense, this suggests I should be willing to spend 14 hours to save one second. I don’t go that far, but I do try to keep it in mind.</dt-fn>
+  <p>Explanations don’t always happen one-to-one. People give lectures, write books, or communicate online. In these one-to-many cases, there's no additional cost to share the explanation with more people. However, the cost of understanding is paid by each and every member of the audience.<dt-fn>More formally, if N people are trying to understand each other, it takes each one O(1) effort to write an explanation of their ideas but O(N) effort to understand each of the other N-1 people's ideas. The result is that energy cost looks like O(a + bN) where a and b are coefficients for the trade off between energy on the explanation side and energy on the understanding side. That is a is the energy spent on explaining and b is the corresponding effort needed to understand. This is similar to ideas in  <dt-cite key="brooks1986mythical">The Mythical Man-Month</dt-cite></dt-fn> As a result, the cost of understanding often has a huge multiplier in the interpretive labor tradeoff.<dt-fn>For example, my average blog post is read by over 100,000 people; if I can save each reader just one second, I’ve saved humanity 30 hours.</dt-fn>
 
-  <figure class="l-full">
-  <img src="assets/publish-one-many.png">
+  <figure class="l-body-outset" style="margin-top:0px; margin-bottom: 0px;">
+  <img src="assets/publish-one-many-crop.jpg">
   </figure>
 
   <p>In research, we often have a group of researchers all trying to understand each other. Just like before, the cost of explaining stays constant as the group grows, but the cost of understanding everyone else increases. At some size, the effort to understand everyone else becomes too much. As a defense mechanism, people specialize, focusing on a narrower area of interest. The maintainable size of the field is controlled by how you trade off the energy between communicating and understanding.
 
-  <p>Interpretive labor is most obviously linked to “poor exposition” component of technical debt, but I think the same mechanism is behind most of it. Thoughtfully picking notation and abstractions is interpretive labor, making it easier for others to understand and think. Polishing an idea, figuring out the right framing, analogies, and pictures is interpretive labor. <!--Open sourcing clean code instead of just sketching something in a paper is interpretive labor.--> Making your work easy to filter and quickly get the core idea of is interpretive labor.
+  <!--<p>Interpretive labor is most obviously linked to “poor exposition” component of technical debt, but I think the same mechanism is behind most of it. Thoughtfully picking notation and abstractions is interpretive labor, making it easier for others to understand and think. Polishing an idea, figuring out the right framing, analogies, and pictures is interpretive labor. Making your work easy to filter and quickly get the core idea of is interpretive labor.-->
 
   <!--Research debt is progressive piling on of interpretive labor. It saves individual researchers’ energy, at the cost of making it harder for the community to understand and build on their work, fragmenting the field.-->
 
@@ -116,15 +133,16 @@ dt-article ul li p:last-of-type {
 
   <h2>Supporting Distillation</h2>
 
-  <p>Research distillation is the opposite of research debt. It combines deep technical expertise, empathy, design and writing skills to grow clarity and distill ideas. It can be an incredibly satisfying activity, doing justice to our research and laying bare beautiful insights.
+  <p>Research distillation is the opposite of research debt. It can be incredibly satisfying, combining deep scientific understanding, empathy, and design to do justice to our research and lay bare beautiful insights.
 
- <!-- It’s doing justice to our research, stripping out crud, and laying bare beautiful insights. It’s sharing the rush of insight with others and vicariously reliving understanding for the first time ourselves. -->
+    <!-- It can be incredibly satisfying -- combining deep technical expertise, empathy, design and writing to do justice to our research and lay bare beautiful insights. -->
+    <!-- It combines deep technical expertise, empathy, design and writing skills to grow clarity and distill ideas. It can be incredibly satisfying, doing justice to our research and laying bare beautiful insights.</p> -->
 
-  <p>Unfortunately, it’s hard to do so seriously because the research community doesn’t really support or celebrate it. It isn’t seen as a real research contribution. There is a strange kind of informal support for this work<dt-fn>Christopher has personally benefitted a great deal from this informal support.</dt-fn> but it’s tricky to build a career on.
+  <p>Unfortunately, it’s hard to do so seriously because the research community doesn’t really support<dt-fn>There is a strange kind of informal support for people working on research distillation. Christopher has personally benefitted a great deal from this. But it’s unreliable and not widely advertised, which makes it hard to build a career on.</dt-fn> or celebrate it. It isn’t seen as a real research contribution.
 
-  <p>If you are someone who is excited to distill ideas, to seek clarity, and build beautiful explanations, then I think we are letting you down. You have something incredibly precious to contribute and we aren’t supporting you as much as we ought to. I’m sorry for that. Many of us would like to support you more and that’s why we’ve created Distill.
+  <p>If you are excited to distill ideas, seek clarity, and build beautiful explanations, we are letting you down. You have something precious to contribute and we aren’t supporting you the way we should.
 
-  <p>Distill is an umbrella for two efforts to support research distillation and other non-traditional contributions:
+  <p>Distill is an umbrella for two efforts to better support research distillation and other non-traditional contributions:
 
   <ul>
   <li> <b>The Distill Journal</b> -- A venue to give traditional validation to non-traditional contributions.</li>
@@ -138,36 +156,62 @@ dt-article ul li p:last-of-type {
 
     <hr>
 
-  <h2><b style="font-size: 160%;">Further Reading</b></h2>
-  <h2>Examples</h2>
+    <h2><b style="font-size: 160%;">Frequently Asked Questions</b></h2>
 
-  <ul>
+    <div class="FAQ">
 
-  <li><b>Visual Mathematics:</b> Several mathematicians have made remarkable efforts to visually explain certain topics. While visualization isn't necessary to make outstanding explanations, these efforts really stand out as attempts to take sophisticated ideas and beatifully explain them.
+      <div class="question"> Won't someone else clean up for us?</div>
+      <div class="answer">
+        People will do things like write textbooks but, while it helps, their energy is spread too thin to digest every idea.  <br>
 
-    <p>One striking example, <dt-cite key="needham1998visual"><i>Visual Complex Analysis</i></dt-cite> by Needham, a breathtaking tour-de-force of Complex Analysis. (Needham is now working on a book on Differential Geometry.) Similarly, Nathan Carter's <dt-cite key="carter2009visual"><i>Visual Group Theory</i></dt-cite> does a remarkable job bringing a visual perspective to the topic.</p>
+        Cleaning it up requires focused energy and talent.
 
-    <p>On a smaller scale, there's been a great deal of exploration -- both historically, and even more recently -- in visual mathematical proofs. See the MathOverflow thread <a href="http://mathoverflow.net/questions/8846/proofs-without-words">Proofs Without Words</a> for examples.</p>
-  </li>
 
-  <li><b>Explorable Explanations / Tools for Thought:</b> ... </li>
+        It's true that some kind souls do heroic feats like writing a textbook, but waiting for them is not a solution. Research debt is a lack of interpretive labor. Cleaning it up requires focused energy and talent. We can not cheat our way out of our debt. We can’t solve it by having one person write a textbook: their energy is spread too thin to polish every idea from scratch. We can’t outsource the work: refining and explaining ideas requires creativity and deep understanding. The only way out is labor, and no hoard of geniuses eager to polish the work of others follows us. We must own our debt.
+      </div>
 
-  <li><b>Research Distribution:</b> Over last few years, there has been a big push to improve the accessibility, convenience, and organization of research.
+      <div class="question">Do researchers deliberately explain things badly?</div>
+      <div class="answer"></div>
+    </div>
 
-     <p>Firstly, there is the push for research to be freely available online. This includes the formation of <a href="arxiv.org">ArXiv</a> and <a href="https://www.plos.org/">PLOS</a>, and <a href="http://oad.simmons.edu/oadwiki/Journal_declarations_of_independence">journal editorial boards resigning</a> to start open-access journals. Increasingly, openness is the default in many fields.</p>
 
-     <p>Once it's easy to access all research, the next problem is filtering through the overwhelming amount of research that exists. One neat tool to help with this is Andrej Karpathy's <a href="http://www.arxiv-sanity.com/">ArXiv Sanity</a>. Online communities, such as <a href="https://news.ycombinator.com/">Hacker News</a> and <a href="https://www.reddit.com/r/MachineLearning/">r/MachineLearning</a> can also help curate and draw attention to important research.</p>
 
-     </li>
-
-  <!-- Open access, PLOS, ArXiv, arxiv sanity, etc
-       JMLR statement: http://jmlr.csail.mit.edu/statement.html
-       At least 22 statements
-       OpenAI Unconference?
-       One minute papers, short science papers, ???
+    <!--
+        What are the stakes?
+         Who should clean up the debt?
+         What does research distillation look like?
+         How do I get started in research distillation?
+         Are researchers deliberatly opaque?
      -->
 
+  <hr>
+
+  <figure class="l-body side" style="margin-left: 0px; margin-bottom:0px; width:200px;">
+  <img src="assets/headstand.jpg">
+  </figure>
+  <h2><b style="font-size: 160%;">Further Reading</b></h2>
+  <h2>Examples</h2>
+  <ul>
+
+    <li><b>Visual Mathematics:</b>
+
+        Several mathematicians have made remarkable efforts to visually explain certain topics. Needham's tour-de-force <dt-cite key="needham1998visual"><i>Visual Complex Analysis</i></dt-cite> is particularly striking, but there are several lovely examples of new clarity being brought to a topic by visually reformulating it <dt-cite key="carter2009visual,needham1993visual,needhamUnpublished"></dt-cite> and, on a smaller scale, <a href="http://mathoverflow.net/questions/8846/proofs-without-words">a plethora of visual proofs</a>.
+  </li>
+  <li><b>Explorable Explanations / Tools for Thought:</b>
+
+    There's a tremendously exciting strand of
+  </li>
+  <li><b>Research Distribution:</b>
+
+    Over last few decades, there's been a big push for research to be freely available online. This includes the formation of <a href="arxiv.org">ArXiv</a> and <a href="https://www.plos.org/">PLOS</a>, and <a href="http://oad.simmons.edu/oadwiki/Journal_declarations_of_independence">journal editorial boards resigning</a> to start open-access journals.
+
+     <p>Increasingly, the challenge filtering accessible content. Karpathy's <a href="http://www.arxiv-sanity.com/">ArXiv Sanity</a> is a lovely tool for this, and the crowd curation by online communities also helps a great deal.</p>
+
+  </li>
+
   </ul>
+
+  <!-- Tufte?? -->
 
   <h2>Philosophy</h2>
 
@@ -175,7 +219,7 @@ dt-article ul li p:last-of-type {
 
   <ul>
 
-  <li> <b>Mathematics:</b> There seems to be a growing appreciation of the
+  <li> <b>Mathematics:</b> There seems to be a growing appreciation and celebration in mathematical culture
 
     Mathematical culture is the only place I've really seen the contribution of distilling knowledge deeply acknowledged and celebrated. Some great comments and references are collected in this <a href="http://mathoverflow.net/questions/43690/whats-a-mathematician-to-do">MathOverflow thread</a>. I'd draw particular attention to section 6 of Thurston's essay <dt-cite key="thurston1998proof">On Proof and Progress in Mathematics</dt-cite> where he recounts accidentally killing a field by drowning it in research debt.
 
@@ -189,15 +233,23 @@ dt-article ul li p:last-of-type {
 </dt-article>
 <dt-appendix class="centered">
   <h3>Acknowledgments</h3>
-  <p></p>
+  <p>This essay has benefitted from the comments of many people, including: Dan Mané, Emma Pierson, Jennifer Daniel, Michael Nielsen, Cassandra Xia, Geoffrey Irving, Elizabeth Van Nostrand, Maithra Raghu, Greg Brockman, Hannah Davis, Devon Zuegel, Wojciech Zaremba, Vikas Sindhwani, Pierre Sermanet, Mike Schuster, George Dahl, Jascha Sohl-dickstein, Adam Roberts, Greg Corrado, Samy Bengio, Yomna Nasser, Katherine Ye, Dave Rushton-Smith, Martin Wattenberg, Fernanda Viegas, Eric Breck,	Aaron Courville. </p>
+
+  <h3>Author Contributions</h3>
+  <p>This essay was primarily written by Chris Olah and illustrated by Shan Carter.</p>
 </dt-appendix>
 <dt-footer></dt-footer>
 <script type="text/bibliography">
 @book{needham1998visual,
-  title={Visual complex analysis},
+  title={Visual Complex Analysis},
   author={Needham, Tristan},
   year={1998},
   publisher={Oxford University Press}
+}
+@book{needhamUnpublished,
+  title={Visual Differential Geometry},
+  author={Needham, Tristan},
+  year={Work In Progress},
 }
 @misc{nielsen2016thought,
   title={Thought as a Technology},
@@ -206,13 +258,13 @@ dt-article ul li p:last-of-type {
   url={http://cognitivemedium.com/tat/index.html}
 }
 @misc{nielsen2016towards,
-  title={Toward an exploratory medium for mathematics},
+  title={Toward an Exploratory Medium for Mathematics},
   author={Nielsen, Michael},
   year={2016},
   ulr={http://cognitivemedium.com/tat/index.html}
 }
 @article{thurston1998proof,
-  title={On proof and progress in mathematics},
+  title={On Proof and Progress in Mathematics},
   author={Thurston, William P},
   journal={New directions in the philosophy of mathematics},
   pages={337--55},
@@ -220,56 +272,34 @@ dt-article ul li p:last-of-type {
   url={https://arxiv.org/pdf/math/9404236v1.pdf}
 }
 @book{carter2009visual,
-  title={Visual group theory},
+  title={Visual Group Theory},
   author={Carter, Nathan},
   year={2009},
   publisher={MAA}
 }
-@misc{jordan2001leading,
-  title={Leading ML researchers issue statement of support for JMLR},
-  author={Chris Atkeson
-   and Peter Bartlett
-   and Andrew Barto
-   and Jonathan Baxter
-   and Yoshua Bengio
-   and Kristin Bennett
-   and Chris Bishop
-   and Justin Boyan
-   and Carla Brodley
-   and Claire Cardie
-   and William Cohen
-   and Peter Dayan
-   and Tom Dietterich
-   and Jerome Friedman
-   and Nir Friedman
-   and Zoubin Ghahramani
-   and David Heckerman
-   and Geoffrey Hinton
-   and Haym Hirsh
-   and Tommi Jaakkola
-   and Michael Jordan
-   and Leslie Kaelbling
-   and Daphne Koller
-   and John Lafferty
-   and Sridhar Mahadevan
-   and Marina Meila
-   and Andrew McCallum
-   and Tom Mitchell
-   and Stuart Russell
-   and Lawrence Saul
-   and Bernhard Schoelkopf
-   and John Shawe-Taylor
-   and Yoram Singer
-   and Satinder Singh
-   and Padhraic Smyth
-   and Richard Sutton
-   and Sebastian Thrun
-   and Manfred Warmuth
-   and Chris Williams
-   and Robert Williamson},
-  year={2001},
-  publisher={October},
-  url={http://jmlr.csail.mit.edu/statement.html}
+@article{brooks1986mythical,
+  title={The Mythical Man-Month},
+  author={Brooks, Fred},
+  journal={Tutorial},
+  volume={11},
+  pages={35--42},
+  year={1986}
+}
+@article{needham1993visual,
+  title={A visual explanation of Jensen's inequality},
+  author={Needham, Tristan},
+  journal={The American mathematical monthly},
+  volume={100},
+  number={8},
+  pages={768--771},
+  year={1993},
+  publisher={JSTOR}
+}
+@book{graeber2015utopia,
+  title={The utopia of rules: On technology, stupidity, and the secret joys of bureaucracy},
+  author={Graeber, David},
+  year={2015},
+  publisher={Melville House}
 }
 </script>
 </body>
