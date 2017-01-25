@@ -14,26 +14,7 @@
     - Google Brain: http://g.co/brain
 </script>
 <style>
-dt-article ul li {
-  font-family:  Georgia, serif;
-  padding-bottom: 15px;
-  margin-left: 20px;
-  padding-left: 5px;
-}
-dt-article .tight-list li {
-  padding-bottom: 5px;
-}
-dt-article ul li:last-of-type {
-  padding-bottom: 5px;
-}
 
-dt-article ul li p {
-  margin-top: 15px;
-  margin-bottom: 15px;
-}
-dt-article ul li p:last-of-type {
-  margin-bottom: 0px;
-}
 
 dt-fn sup {
   vertical-align: super;
@@ -42,25 +23,42 @@ dt-fn sup {
   padding-right: 3px;
   cursor: pointer;
 }
-
+/*
 .FAQ .question {
   font-weight: bold;
 }
 
 .FAQ .answer {
   padding-left: 40px;
-}
+}*/
 </style>
 </head>
 
 <body>
 <dt-article class="centered">
-
-  <figure class="l-page" style="margin-top: 50px; margin-bottom: 10px;">
-  <img src="assets/debt-mountain.jpg">
+  <style>
+    .mountain-illustration {
+      margin-top: 20px;
+      margin-bottom: 10px;
+      width: 180%;
+      margin-left: -40%;
+    }
+    @media (min-width: 768px) {
+      .mountain-illustration {
+        max-width: 1200px;
+        margin-left: auto;
+        width: 100%;
+      }
+    }
+    dt-article > h1:first-of-type {
+      margin-top: 0;
+    }
+  </style>
+  <figure class="l-screen mountain-illustration">
+    <img src="assets/debt-mountain.jpg">
   </figure>
 
-  <h1 style="margin-top: 40px;">Research Debt</h1>
+  <h1>Research Debt</h1>
   <dt-byline></dt-byline>
 
 
@@ -317,7 +315,7 @@ dt-fn sup {
   url={http://worrydream.com/MediaForThinkingTheUnthinkable/}
 }
 @misc{hartl2013tau,
-  title={The Tau Nanifesto},
+  title={The Tau Manifesto},
   author={Hartl, Michael},
   year={2013},
   url={http://tauday.com}
