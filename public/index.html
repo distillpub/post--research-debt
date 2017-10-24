@@ -1,41 +1,77 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8">
-<script src="http://distill.pub/template.v1.js"></script>
-<script type="text/front-matter">
-  title: Research Debt
-  description: Science is a human activity. When we fail to distill and explain research, we accumulate a kind of debt...
-  authors:
-    - Chris Olah: http://colah.github.io
-    - Shan Carter: http://shancarter.com
-  affiliations:
-    - Google Brain: http://g.co/brain
-    - Google Brain: http://g.co/brain
-</script>
-<style>
+  <meta charset="utf-8">
+  <script src="https://distill.pub/template.v2.js"></script>
+  <style>
+    d-footnote sup {
+      vertical-align: super;
+      line-height: 0.5em;
+      padding-left: 3px;
+      padding-right: 3px;
+      cursor: pointer;
+    }
 
+    .mountain-illustration {
+      margin-top: 20px;
+      margin-bottom: -20px;
+      width: 180%;
+      margin-left: -40%;
+    }
+    
+    .mountain-illustration img {
+      height: auto;
+    }
+    
+    @media (min-width: 768px) {
+      .mountain-illustration {
+        max-width: 1250px;
+        margin-left: auto;
+        width: 100%;
+      }
+    }
 
-dt-fn sup {
-  vertical-align: super;
-  line-height: 0.5em;
-  padding-left: 3px;
-  padding-right: 3px;
-  cursor: pointer;
-}
-/*
-.FAQ .question {
-  font-weight: bold;
-}
-
-.FAQ .answer {
-  padding-left: 40px;
-}*/
-</style>
+    d-title {
+      padding-top: 0;
+    }
+    
+    d-title > h1:first-of-type {
+      margin-top: -20px;
+      position: relative;
+    }
+  </style>
 </head>
 
 <body>
-<dt-article class="centered">
+  
+<d-front-matter><script type="text/json">{
+  "title": "Research Debt",
+  "description": "Science is a human activity. When we fail to distill and explain research, we accumulate a kind of debt...",
+  "authors": [
+    {
+      "author":"Chris Olah",
+      "authorURL":"https://colah.github.io/",
+      "affiliation":"Google Brain",
+      "affiliationURL":"https://g.co/brain"
+    },
+    {
+      "author":"Shan Carter",
+      "authorURL":"https://shancarter.com/",
+      "affiliation":"Google Brain",
+      "affiliationURL":"https://g.co/brain"
+    }
+  ]
+}</script></d-front-matter>
+  
+<d-title>
+  <figure style="grid-column: page;" class="mountain-illustration">
+    <img src="assets/debt-mountain.jpg" width="2500px" height="1112px">
+  </figure>
+  <h1>Research Debt</h1>
+</d-title>
+
+
+<d-article>
   <style>
     .mountain-illustration {
       margin-top: 20px;
@@ -54,19 +90,14 @@ dt-fn sup {
       margin-top: 0;
     }
   </style>
-  <figure class="l-screen mountain-illustration">
-    <img src="assets/debt-mountain.jpg">
-  </figure>
-
-  <h1>Research Debt</h1>
-  <dt-byline></dt-byline>
+  
 
 
   <p>Achieving a research-level understanding of most topics is like climbing a mountain. Aspiring researchers must struggle to understand vast bodies of work that came before them, to learn techniques, and to gain intuition. Upon reaching the top, the new researcher begins doing novel work, throwing new stones onto the top of the mountain and making it a little taller for whoever comes next.
 
   <p>Mathematics is a striking example of this. For centuries, countless minds have climbed the mountain range of mathematics and laid new boulders at the top. Over time, different peaks formed, built on top of particularly beautiful results. Now the peaks of mathematics are so numerous and steep that no person can climb them all. Even with a lifetime of dedicated effort, a mathematician may only enjoy some of their vistas.
 
-  <p>People expect the climb to be hard. It reflects the tremendous progress and cumulative effort that’s gone into mathematics. The climb is seen as an intellectual pilgrimage, the labor a rite of passage. But the climb could be massively easier. It's entirely possible to build paths and staircases into these mountains.<dt-fn>That is, really outstanding tutorials, reviews, textbooks, and so on.</dt-fn> The climb isn’t something to be proud of.
+  <p>People expect the climb to be hard. It reflects the tremendous progress and cumulative effort that’s gone into mathematics. The climb is seen as an intellectual pilgrimage, the labor a rite of passage. But the climb could be massively easier. It's entirely possible to build paths and staircases into these mountains.<d-footnote>That is, really outstanding tutorials, reviews, textbooks, and so on.</d-footnote> The climb isn’t something to be proud of.
 
   <p>The climb isn’t progress: the climb is a mountain of debt.
 
@@ -85,20 +116,20 @@ dt-fn sup {
   <li> <b>Undigested Ideas</b> – Most ideas start off rough and hard to understand. They become radically easier as we polish them, developing the right analogies, language, and ways of thinking.</li>
 
 
-  <!--Often ideas start off very rough and hard to understand and become radically easier as we polish them, developing the right analogies, language, visualizations and abstractions. For example, at one point calculus was something that only geniuses could understand, but we now teach it in high school: something changed, and I don’t think it was us.<dt-fn>This form of debt seems particularly tragic, because I think people frequently have a much more digested version of the idea in their heads. Unfortunately, they don't communicate it except in personal conversations because it is often hard to communicate and fragile. (An additional challenge is that people often have intuitions they know aren’t 100% right, even though they are useful.) The result is that everyone needs to repolish the ideas for themselves, and the ideas aren’t progressively refined.</dt-fn>-->
+  <!--Often ideas start off very rough and hard to understand and become radically easier as we polish them, developing the right analogies, language, visualizations and abstractions. For example, at one point calculus was something that only geniuses could understand, but we now teach it in high school: something changed, and I don’t think it was us.<d-footnote>This form of debt seems particularly tragic, because I think people frequently have a much more digested version of the idea in their heads. Unfortunately, they don't communicate it except in personal conversations because it is often hard to communicate and fragile. (An additional challenge is that people often have intuitions they know aren’t 100% right, even though they are useful.) The result is that everyone needs to repolish the ideas for themselves, and the ideas aren’t progressively refined.</d-footnote>-->
 
-  <li> <b>Bad abstractions and notation</b> – Abstractions and notation are the user interface of research, shaping how we think and communicate. Unfortunately, we often get stuck with the first formalisms to develop even when they're bad.  For example, an object with extra electrons is negative, and <dt-cite key="hartl2013tau">pi is wrong</dt-cite>.</li>
+  <li> <b>Bad abstractions and notation</b> – Abstractions and notation are the user interface of research, shaping how we think and communicate. Unfortunately, we often get stuck with the first formalisms to develop even when they're bad.  For example, an object with extra electrons is negative, and <d-cite key="hartl2013tau">pi is wrong</d-cite>.</li>
 
   <!--* <b>Bad abstractions and notation</b> – Abstractions and notation are the user interface of research. When ideas first develop, formalisms develop with them, for communication and researchers’ own thoughts. These initial formalisms tend to be far from optimal but we often get stuck with them. For example, something with extra electrons negative, and pi is wrong.-->
 
-  <!--* <b>Bad definitions, abstractions, and notation</b> – Formalisms like abstractions and notation are the user interface of research. When ideas first develop, formalisms develop with them, for communication and researchers’ own thoughts. These initial formalisms are often far from the best possible ones. Better formalisms arise over time, from general refinement of ideas, deliberate work on the formalism, or opportunities in new media. Unfortunately, poor formalisms are extremely persistent, even once better ones are found.<dt-fn>One reason bad formalisms persist is that the switching costs are high, but there’s another, subtler reason. Becoming an expert in a field causes the formalisms to become part of you, in the same way language is. When one sees new formalisms, they often feel worse: you’re not fluent in the new notation, so it feels clunky, and you’ve learned to cope with any shortcomings of your familiar formalism that it fixes. Even genuine, significant improvements may seem minor or unimportant to an expert. Sadly, it’s the novice who faces the brunt of the cost.</dt-fn> For example: something with extra electrons is negative, pi is wrong, and topology is better defined in terms of closure.-->
+  <!--* <b>Bad definitions, abstractions, and notation</b> – Formalisms like abstractions and notation are the user interface of research. When ideas first develop, formalisms develop with them, for communication and researchers’ own thoughts. These initial formalisms are often far from the best possible ones. Better formalisms arise over time, from general refinement of ideas, deliberate work on the formalism, or opportunities in new media. Unfortunately, poor formalisms are extremely persistent, even once better ones are found.<d-footnote>One reason bad formalisms persist is that the switching costs are high, but there’s another, subtler reason. Becoming an expert in a field causes the formalisms to become part of you, in the same way language is. When one sees new formalisms, they often feel worse: you’re not fluent in the new notation, so it feels clunky, and you’ve learned to cope with any shortcomings of your familiar formalism that it fixes. Even genuine, significant improvements may seem minor or unimportant to an expert. Sadly, it’s the novice who faces the brunt of the cost.</d-footnote> For example: something with extra electrons is negative, pi is wrong, and topology is better defined in terms of closure.-->
 
-  <!--* <b>Unavailable Tools</b>  – Whether you are a student programming for the first time, or an expert trying to reproduce an experiment, being able to easily dive into topics and get your hands dirty is critical. Availability of tools makes it easier to learn because people can test their mental models.<dt-fn>Rapid feedback is a documentation all of its own, and quick results are an incredible motivation</dt-fn> It also facilitates the reproduction of results and the translation of research into application. Sadly, these tools are often not public, or the public versions are unusable.-->
+  <!--* <b>Unavailable Tools</b>  – Whether you are a student programming for the first time, or an expert trying to reproduce an experiment, being able to easily dive into topics and get your hands dirty is critical. Availability of tools makes it easier to learn because people can test their mental models.<d-footnote>Rapid feedback is a documentation all of its own, and quick results are an incredible motivation</d-footnote> It also facilitates the reproduction of results and the translation of research into application. Sadly, these tools are often not public, or the public versions are unusable.-->
 
-  <li> <b>Noise</b> – Being a researcher is like standing in the middle of a construction site. Countless papers scream for your attention and there's no easy way to filter or summarize them.<dt-fn>Because most work is explained poorly, it takes a lot of energy to understand each piece of work. For many papers, one wants a simple one sentence explanation of it, but needs to fight with it to get that sentence. Because the simplest way to get the attention of interested parties is to get everyone’s attention, we get flooded with work. Because we incentivize people being “prolific,” we get flooded with a lot of work…</dt-fn> We think noise is the main way experts experience research debt.</li>
+  <li> <b>Noise</b> – Being a researcher is like standing in the middle of a construction site. Countless papers scream for your attention and there's no easy way to filter or summarize them.<d-footnote>Because most work is explained poorly, it takes a lot of energy to understand each piece of work. For many papers, one wants a simple one sentence explanation of it, but needs to fight with it to get that sentence. Because the simplest way to get the attention of interested parties is to get everyone’s attention, we get flooded with work. Because we incentivize people being “prolific,” we get flooded with a lot of work…</d-footnote> We think noise is the main way experts experience research debt.</li>
 
 
-  <!--* <b>Noise</b> – If becoming a researcher is like climbing a mountain, being a researcher is often like standing in the middle of construction site: loud. When hundreds of papers are published each day, with no easy way to filter or summarize them, the energy needed to keep up with a field is too high.<dt-fn>Because most work is explained poorly, it takes a lot of energy to understand each piece of work. For many papers, I want a simple one sentence explanation of it, but need to fight with it to get that sentence. Because the simplest way to get the attention of interested parties is to get everyone’s attention, we get flooded with work. Because we incentivize people being “prolific,” we get flooded with a lot of work…</dt-fn> I think noise is the main way experts experience research debt.-->
+  <!--* <b>Noise</b> – If becoming a researcher is like climbing a mountain, being a researcher is often like standing in the middle of construction site: loud. When hundreds of papers are published each day, with no easy way to filter or summarize them, the energy needed to keep up with a field is too high.<d-footnote>Because most work is explained poorly, it takes a lot of energy to understand each piece of work. For many papers, I want a simple one sentence explanation of it, but need to fight with it to get that sentence. Because the simplest way to get the attention of interested parties is to get everyone’s attention, we get flooded with work. Because we incentivize people being “prolific,” we get flooded with a lot of work…</d-footnote> I think noise is the main way experts experience research debt.-->
 
 </ul>
 
@@ -110,9 +141,9 @@ dt-fn sup {
 
   <h2>Interpretive Labor</h2>
 
-  <p>There’s a tradeoff between the energy put into explaining an idea, and the energy needed to understand it. On one extreme, the explainer can painstakingly craft a beautiful explanation, leading their audience to understanding without even realizing it could have been difficult. On the other extreme, the explainer can do the absolute minimum and abandon their audience to struggle. This energy is called <a href="https://acesounderglass.com/2015/06/09/interpretive-labor/">interpretive labor</a> <dt-cite key="nostrand2015interpretive,graeber2015utopia"></dt-cite>.
+  <p>There’s a tradeoff between the energy put into explaining an idea, and the energy needed to understand it. On one extreme, the explainer can painstakingly craft a beautiful explanation, leading their audience to understanding without even realizing it could have been difficult. On the other extreme, the explainer can do the absolute minimum and abandon their audience to struggle. This energy is called <a href="https://acesounderglass.com/2015/06/09/interpretive-labor/">interpretive labor</a> <d-cite key="nostrand2015interpretive,graeber2015utopia"></d-cite>.
 
-  <p>Many explanations are not one-to-one. People give lectures, write books, or communicate online. In these one-to-many cases, each member of the audience pays the cost of understanding, even though the cost of explaining stays the same.<dt-fn>More formally, if <i>N</i> people are trying to understand each other, it takes each one <i>O(1)</i> effort to write an explanation of their ideas but <i>O(N)</i> effort to understand each of the other <i>N-1</i> people's ideas. The result is that energy cost looks like <i>O(a + bN)</i> where <i>a</i> and <i>b</i> are coefficients for the trade off between energy on the explanation side and energy on the understanding side. That is a is the energy spent on explaining and b is the corresponding effort needed to understand. This is similar to ideas in  <dt-cite key="brooks1986mythical">The Mythical Man-Month</dt-cite></dt-fn> As a result, the cost of understanding has a multiplier in the interpretive labor tradeoff -- sometimes a huge multiplier.<dt-fn>For example, Christopher's average blog post is read by over 100,000 people; if he can save each reader just one second, he's saved humanity 30 hours.</dt-fn>
+  <p>Many explanations are not one-to-one. People give lectures, write books, or communicate online. In these one-to-many cases, each member of the audience pays the cost of understanding, even though the cost of explaining stays the same.<d-footnote>More formally, if <i>N</i> people are trying to understand each other, it takes each one <i>O(1)</i> effort to write an explanation of their ideas but <i>O(N)</i> effort to understand each of the other <i>N-1</i> people's ideas. The result is that energy cost looks like <i>O(a + bN)</i> where <i>a</i> and <i>b</i> are coefficients for the trade off between energy on the explanation side and energy on the understanding side. That is a is the energy spent on explaining and b is the corresponding effort needed to understand. This is similar to ideas in  <d-cite key="brooks1986mythical">The Mythical Man-Month</d-cite></d-footnote> As a result, the cost of understanding has a multiplier in the interpretive labor tradeoff -- sometimes a huge multiplier.<d-footnote>For example, Christopher's average blog post is read by over 100,000 people; if he can save each reader just one second, he's saved humanity 30 hours.</d-footnote>
 
   <figure class="l-body-outset" style="margin-top:0px; margin-bottom: 0px;">
   <img src="assets/publish-one-many-crop.jpg">
@@ -127,7 +158,7 @@ dt-fn sup {
 
   <h2>Clear Thinking</h2>
 
-  <p>It's worth being clear that research debt isn't just about ideas not being explained well. It's a lack of digesting ideas – or, at least, a lack of the public version of ideas being digested.<dt-fn>Often, some individuals have a much more developed version of an idea than is publicly shared. There are a lot of reasons for not sharing it (in particular, they're often not traditionally publishable).</dt-fn> It's a communal messiness of thought.
+  <p>It's worth being clear that research debt isn't just about ideas not being explained well. It's a lack of digesting ideas – or, at least, a lack of the public version of ideas being digested.<d-footnote>Often, some individuals have a much more developed version of an idea than is publicly shared. There are a lot of reasons for not sharing it (in particular, they're often not traditionally publishable).</d-footnote> It's a communal messiness of thought.
 
   <p>Developing good abstractions, notations, visualizations, and so forth, is improving the user interfaces for ideas. This helps both with understanding ideas for the first time and with thinking clearly about them. Conversely, if we can't explain an idea well, that's often a sign that we don't understand it as well as we could.
 
@@ -152,11 +183,11 @@ dt-fn sup {
 
   <p>Like the theoretician, the experimentalist or the research engineer, the research distiller is an integral role for a healthy research community. Right now, almost no one is filling it.
 
-  <p>Why do researchers not work on distillation? One possibility is perverse incentives, like wanting your work to look difficult. Those certainly exist, but we don't think they're the main factor.<dt-fn>
-    There are a lot of perverse incentives that push against explaining things well, sharing data, and so forth. This is especially true when the work you are doing isn't that interesting or isn't reproducible and you want to obscure that. Or if you have a lot of competitors and don't want them to catch up.<br>However, our experience is that most good researchers don't seem that motivated by these kind of factors. Instead, the main issue is that it isn't worthwhile for them to divert energy from pursuing results to distill things. Perhaps things are different in other fields, or I'm not cynical enough.</dt-fn>
+  <p>Why do researchers not work on distillation? One possibility is perverse incentives, like wanting your work to look difficult. Those certainly exist, but we don't think they're the main factor.<d-footnote>
+    There are a lot of perverse incentives that push against explaining things well, sharing data, and so forth. This is especially true when the work you are doing isn't that interesting or isn't reproducible and you want to obscure that. Or if you have a lot of competitors and don't want them to catch up.<br>However, our experience is that most good researchers don't seem that motivated by these kind of factors. Instead, the main issue is that it isn't worthwhile for them to divert energy from pursuing results to distill things. Perhaps things are different in other fields, or I'm not cynical enough.</d-footnote>
   Another possibility is that they don't enjoy research distillation. Again, we don't think that's what's going on.</p>
 
-  <p>Lots of people want to work on research distillation. Unfortunately, it's very difficult to do so, because we don't support them.<dt-fn>There is a strange kind of informal support for people working on research distillation. Christopher has personally benefitted a great deal from this. But it’s unreliable and not widely advertised, which makes it hard to build a career on.</dt-fn>
+  <p>Lots of people want to work on research distillation. Unfortunately, it's very difficult to do so, because we don't support them.<d-footnote>There is a strange kind of informal support for people working on research distillation. Christopher has personally benefitted a great deal from this. But it’s unreliable and not widely advertised, which makes it hard to build a career on.</d-footnote>
 
   <p>An aspiring research distiller lacks many things  that are easy to take for granted: a career path, places to learn, examples and role models. Underlying this is a deeper issue: their work isn’t seen as a real research contribution. We need to fix this.</p>
 
@@ -189,26 +220,25 @@ dt-fn sup {
      -->
 
   <hr>
-
-  <figure class="l-body side" style="margin-left: 0px; margin-bottom:0px; width:200px;">
-  <img src="assets/headstand.jpg">
-  </figure>
   <h2>Further Reading</h2>
+  <figure style="grid-column: kicker; margin: 0 0 0 0;">
+    <img src="assets/headstand.jpg" style="max-width: 200px;">
+  </figure>
 
   <ul>
 
     <li><b>Visual Mathematics:</b>
 
-        Several mathematicians have made remarkable efforts to visually explain certain topics. Needham's tour-de-force <dt-cite key="needham1998visual"><i>Visual Complex Analysis</i></dt-cite> is particularly striking, but there are several lovely examples of new clarity being brought to a topic by visually reformulating it <dt-cite key="carter2009visual,needham1993visual,needhamUnpublished"></dt-cite> and, on a smaller scale, <a href="http://mathoverflow.net/questions/8846/proofs-without-words">a plethora of visual proofs</a>.
+        Several mathematicians have made remarkable efforts to visually explain certain topics. Needham's tour-de-force <d-cite key="needham1998visual"><i>Visual Complex Analysis</i></d-cite> is particularly striking, but there are several lovely examples of new clarity being brought to a topic by visually reformulating it <d-cite key="carter2009visual,needham1993visual,needhamUnpublished"></d-cite> and, on a smaller scale, <a href="http://mathoverflow.net/questions/8846/proofs-without-words">a plethora of visual proofs</a>.
   </li>
   <li>
     <p><b>Explorable Explanations:</b>
 
-    There's a loose community exploring how the interactive medium enabled by computers can be used to communicate and think in ways previously impossible. These ideas start, as many ideas in computing do, with work done by Douglas Engelbart<dt-cite key="Engelbart:1968:RCA:1476589.1476645"></dt-cite> and Alan Kay<dt-cite key="Kay:1977:PDM:1300728.1301186"></dt-cite>.</p>
+    There's a loose community exploring how the interactive medium enabled by computers can be used to communicate and think in ways previously impossible. These ideas start, as many ideas in computing do, with work done by Douglas Engelbart<d-cite key="Engelbart:1968:RCA:1476589.1476645"></d-cite> and Alan Kay<d-cite key="Kay:1977:PDM:1300728.1301186"></d-cite>.</p>
 
-    <p>More recently, <a href="http://explorableexplanations.com/">Explorable Explanations</a> have started to reimagine what an essay can be in this new medium. This started with Bret Victor’s <dt-cite key="victor2011explorable">foundational essay</dt-cite> and has been further developed by amazing examples (eg. <dt-cite key="bostock2014visualizing,wittens2013how,schaedler2016back"></dt-cite>).
+    <p>More recently, <a href="http://explorableexplanations.com/">Explorable Explanations</a> have started to reimagine what an essay can be in this new medium. This started with Bret Victor’s <d-cite key="victor2011explorable">foundational essay</d-cite> and has been further developed by amazing examples (eg. <d-cite key="bostock2014visualizing,wittens2013how,schaedler2016back"></d-cite>).
 
-    <p>There are also explorations of how we can augment our ability to think in this new medium, bringing previously inaccessible ideas within reach. Once again, Bret Victor has wonderful ideas <dt-cite key="victor2013media,victor2012learnable"></dt-cite>, as does Michael Nielsen <dt-cite key="nielsen2016thought,nielsen2016towards"></dt-cite>.
+    <p>There are also explorations of how we can augment our ability to think in this new medium, bringing previously inaccessible ideas within reach. Once again, Bret Victor has wonderful ideas <d-cite key="victor2013media,victor2012learnable"></d-cite>, as does Michael Nielsen <d-cite key="nielsen2016thought,nielsen2016towards"></d-cite>.
     </p>
 
   </li>
@@ -216,7 +246,7 @@ dt-fn sup {
 
     Over last few decades, there's been a big push for research to be freely available online. This includes the formation of <a href="https://arxiv.org">arXiv.org</a> and <a href="https://www.plos.org/">PLOS</a>, and <a href="http://oad.simmons.edu/oadwiki/Journal_declarations_of_independence">journal editorial boards resigning</a> to start open-access journals.
 
-     <p>Increasingly, the challenge filtering accessible content. Karpathy's <a href="http://www.arxiv-sanity.com/">ArXiv Sanity</a> is a lovely tool for this. Crowd curation by online communities also helps a great deal.</p>
+     <p>Increasingly, the challenge is filtering accessible content. Karpathy's <a href="http://www.arxiv-sanity.com/">ArXiv Sanity</a> is a lovely tool for this. Crowd curation by online communities also helps a great deal.</p>
   </li>
 
   <li> <b>Open-Notebook Science:</b>
@@ -230,194 +260,23 @@ dt-fn sup {
 
   <li> <b>Discussion of Debt and Distillation:</b>
     A number of mathematicians have discussed what we call research distillation. Some great comments and references are collected in this <a href="http://mathoverflow.net/questions/43690/whats-a-mathematician-to-do">MathOverflow thread</a> --
-    I'd draw particular attention to Thurston's account of accidentally killing a field by drowning it in research debt in section 6 of <dt-cite key="thurston1998proof"></dt-cite>.
+    I'd draw particular attention to Thurston's account of accidentally killing a field by drowning it in research debt in section 6 of <d-cite key="thurston1998proof"></d-cite>.
     
-    <p>Other nice thoughts in this space include the idea of an "open exposition problem" <dt-cite key="chow2009beginner"></dt-cite>, Grothendieck's "rising sea" approach to mathematics <dt-cite key="grothendieck1985recoltes"></dt-cite>, and recent calls to value conceptual progress in CS more <dt-cite key="aaronson2008statement"></dt-cite>.</p>
+    <p>Other nice thoughts in this space include the idea of an "open exposition problem" <d-cite key="chow2009beginner"></d-cite>, Grothendieck's "rising sea" approach to mathematics <d-cite key="grothendieck1985recoltes"></d-cite>, and recent calls to value conceptual progress in CS more <d-cite key="aaronson2008statement"></d-cite>.</p>
   </li>
   </ul>
 
-</dt-article>
-<dt-appendix class="centered">
+</d-article>
+<d-appendix class="centered">
   <h3>Acknowledgments</h3>
   <p>We're extremely grateful for the advice and assistance of Jennifer Daniel in illustrating this article. </p>
   <p>This essay has greatly benefitted from the comments of many people, including: Dandelion Mané, Emma Pierson, Michael Nielsen, Cassandra Xia, Geoffrey Irving, Elizabeth Van Nostrand, Maithra Raghu, Greg Brockman, Hannah Davis, Devon Zuegel, Wojciech Zaremba, Vikas Sindhwani, Pierre Sermanet, Mike Schuster, George Dahl, Jascha Sohl-dickstein, Adam Roberts, Greg Corrado, Samy Bengio, Yomna Nasser, Katherine Ye, Dave Rushton-Smith, Martin Wattenberg, Fernanda Viegas, Eric Breck,	Aaron Courville. </p>
 
   <h3>Author Contributions</h3>
   <p>This essay was primarily written by Chris Olah and illustrated by Shan Carter.</p>
-</dt-appendix>
-<dt-footer></dt-footer>
-<script type="text/bibliography">
-@book{needham1998visual,
-  title={Visual Complex Analysis},
-  author={Needham, Tristan},
-  year={1998},
-  publisher={Oxford University Press}
-}
-@book{needhamUnpublished,
-  title={Visual Differential Geometry},
-  author={Needham, Tristan},
-  year={Work In Progress},
-}
-@misc{nielsen2016thought,
-  title={Thought as a Technology},
-  author={Nielsen, Michael},
-  year={2016},
-  url={http://cognitivemedium.com/tat/index.html}
-}
-@misc{nielsen2016towards,
-  title={Toward an Exploratory Medium for Mathematics},
-  author={Nielsen, Michael},
-  year={2016},
-  url={http://cognitivemedium.com/emm/emm.html}
-}
-@article{thurston1998proof,
-  title={On Proof and Progress in Mathematics},
-  author={Thurston, William P},
-  journal={New directions in the philosophy of mathematics},
-  pages={337--55},
-  year={1998},
-  url={https://arxiv.org/pdf/math/9404236v1.pdf}
-}
-@book{carter2009visual,
-  title={Visual Group Theory},
-  author={Carter, Nathan},
-  year={2009},
-  publisher={MAA}
-}
-@article{brooks1986mythical,
-  title={The Mythical Man-Month},
-  author={Brooks, Fred},
-  journal={Tutorial},
-  volume={11},
-  pages={35--42},
-  year={1986}
-}
-@misc{victor2011explorable,
-  title={Explorable explanations},
-  author={Victor, Bret},
-  year={2011},
-  url={http://worrydream.com/ExplorableExplanations/}
-}
-@misc{victor2012learnable,
-  title={Learnable programming},
-  author={Victor, Bret},
-  year={2012},
-  url={http://worrydream.com/LearnableProgramming/}
-}
-@misc{victor2013media,
-  title={Media for thinking the unthinkable},
-  author={Victor, Bret},
-  year={2013},
-  url={http://worrydream.com/MediaForThinkingTheUnthinkable/}
-}
-@misc{hartl2013tau,
-  title={The Tau Manifesto},
-  author={Hartl, Michael},
-  year={2013},
-  url={http://tauday.com}
-}
-@misc{bostock2014visualizing,
-  title={Visualizing Algorithms},
-  author={Bostock, Mike},
-  year={2014},
-  url={https://bost.ocks.org/mike/algorithms/}
-}
-@misc{wittens2013how,
-  title={How to Fold a Julia Fractal},
-  year={2013},
-  author={Wittens, Steven},
-  url={http://acko.net/blog/how-to-fold-a-julia-fractal/}
-}
-@misc{schaedler2016back,
-  title={Back to the Future of Handwriting Recognition},
-  author={Schaedler, Jack},
-  year={2016},
-  url={http://jackschaedler.github.io/handwriting-recognition/}
-}
-@misc{nostrand2015interpretive,
-  title={Interpretive Labor},
-  author={Van Nostrand, Elizabeth},
-  year={2015},
-  url={https://acesounderglass.com/2015/06/09/interpretive-labor/}
-}
-@article{needham1993visual,
-  title={A visual explanation of Jensen's inequality},
-  author={Needham, Tristan},
-  journal={The American mathematical monthly},
-  volume={100},
-  number={8},
-  pages={768--771},
-  year={1993},
-  publisher={JSTOR},
-  doi={10.2307/2324783}
-}
-@book{graeber2015utopia,
-  title={The utopia of rules: On technology, stupidity, and the secret joys of bureaucracy},
-  author={Graeber, David},
-  year={2015},
-  publisher={Melville House}
-}
-@article{Kay:1977:PDM:1300728.1301186,
- author = {Kay, A. and Goldberg, A.},
- title = {Personal Dynamic Media},
- journal = {Computer},
- issue_date = {March 1977},
- volume = {10},
- number = {3},
- month = mar,
- year = {1977},
- issn = {0018-9162},
- pages = {31--41},
- numpages = {11},
- url = {http://dx.doi.org/10.1109/C-M.1977.217672},
- doi = {10.1109/C-M.1977.217672},
- acmid = {1301186},
- publisher = {IEEE Computer Society Press},
- address = {Los Alamitos, CA, USA},
-}
+</d-appendix>
 
-@inproceedings{Engelbart:1968:RCA:1476589.1476645,
- author = {Engelbart, Douglas C. and English, William K.},
- title = {A Research Center for Augmenting Human Intellect},
- booktitle = {Proceedings of the December 9-11, 1968, Fall Joint Computer Conference, Part I},
- series = {AFIPS '68 (Fall, part I)},
- year = {1968},
- location = {San Francisco, California},
- pages = {395--410},
- numpages = {16},
- url = {http://doi.acm.org/10.1145/1476589.1476645},
- doi = {10.1145/1476589.1476645},
- acmid = {1476645},
- publisher = {ACM},
- address = {New York, NY, USA},
-}
+<d-bibliography src="bibliography.bib"></d-bibliography>
 
-@article{chow2009beginner,
-  title={A beginner’s guide to forcing},
-  author={Chow, Timothy Y},
-  journal={Communicating mathematics},
-  volume={479},
-  pages={25--40},
-  year={2009},
-  publisher={American Mathematical Soc.},
-  url={https://arxiv.org/pdf/0712.1320.pdf}
-}
-
-@article{aaronson2008statement,
-  title={Statement on conceptual contributions in theory},
-  author={Aaronson, Scott and Borodin, Allan and Chazelle, Bernard and Goldreich, Oled and Goldwasser, Shafi and Karp, Richard and Kearns, Michael and Papadimitriou, Christos and Sudan, Madhu and Vadhan, Salil},
-  journal={Shtetl-Optimized},
-  year={2008},
-  url={http://www.scottaaronson.com/blog/?p=315}
-}
-
-@article{grothendieck1985recoltes,
-  title={R{\'e}coltes et Semailles},
-  author={Grothendieck, Alexandre},
-  journal={R{\'e}flexions et t{\'e}moignage sur un pass{\'e} de math{\'e}maticien},
-  pages={621},
-  year={1985}
-}
-</script>
 </body>
 </html>
